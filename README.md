@@ -1,0 +1,2 @@
+# libft
+my libc
