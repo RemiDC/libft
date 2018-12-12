@@ -6,29 +6,12 @@
 /*   By: reda-con <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:30:33 by reda-con          #+#    #+#             */
-/*   Updated: 2018/11/23 18:11:21 by reda-con         ###   ########.fr       */
+/*   Updated: 2018/12/12 10:50:59 by reda-con         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 #include <stdlib.h>
-
-static size_t	ct_nb(int n)
-{
-	size_t	i;
-
-	i = 0;
-	if (!n)
-		return (1);
-	if (n < 0)
-		++i;
-	while (n)
-	{
-		n /= 10;
-		++i;
-	}
-	return (i);
-}
 
 char			*ft_itoa(int n)
 {
@@ -37,7 +20,7 @@ char			*ft_itoa(int n)
 	int		fl;
 
 	fl = 0;
-	i = ct_nb(n);
+	i = ft_intlen(n);
 	if (n < 0)
 	{
 		if (n == -2147483648)
